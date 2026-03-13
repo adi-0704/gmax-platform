@@ -194,7 +194,7 @@ export default function AdminProductsPage() {
                           <Edit size={16} />
                         </button>
                         <button 
-                          onClick={() => handleDelete(product._id)}
+                          onClick={() => { if (product._id) handleDelete(product._id); }}
                           className="p-1.5 text-card-foreground/50 hover:text-danger hover:bg-danger/10 rounded transition-colors" 
                           title="Delete"
                         >
